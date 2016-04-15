@@ -54,9 +54,14 @@ p {
 .sub-content {
     width: 75%;
 }
+.header {
+    font-size: 1.5em;
+    cursor: default;
+}
 .title {
     margin-left: 2.5%;
-    font-size: 1.5em;
+    font-size: 1.15em;
+    cursor: default;
 }
 .sub-title {
     margin: 2.5%;
