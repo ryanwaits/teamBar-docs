@@ -5,6 +5,10 @@
     font-family: 'Open Sans', sans-serif; font-weight: 600;
     font-size: 1em;
 }
+::selection {
+    color: rgb(255, 255, 255);
+    background-color: rgb(254, 147, 140);
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -56,7 +60,7 @@ p {
 }
 .header {
     font-size: 1.5em;
-    cursor: default;
+    cursor: pointer;
 }
 .title {
     margin-left: 2.5%;

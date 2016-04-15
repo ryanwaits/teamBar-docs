@@ -64,29 +64,167 @@
                         <pre><code>/api/v1/teams</code></pre>
                     </h4>
                     <p>
-                        When working on a web application that involves a lot of JavaScript, one of the first things you learn is to stop tying your data to the DOM. It's all too easy to create JavaScript applications that end up as tangled piles of jQuery selectors and callbacks, all trying frantically to keep data in sync between the HTML UI, your JavaScript logic, and the database on your server. For rich client-side applications, a more structured approach is often helpful.
+                        Returns a list of all the NFL teams
                     </p>
                     <p>
-                        If you're new here, and aren't yet quite sure what Backbone is for, start by browsing the list of Backbone-based projects.
+                        Authentication: oauth2
                     </p>
+                    <p>
+                        Example Request
+                    </p>
+                    <pre>
+                        GET | http://mvb.com/api/v1/teams
+                    </pre>
+                    <p>
+                        Example Response
+                    </p>
+                    <pre>
+                        [
+                            {
+                                id: 2,
+                                location: "Cincinnati",
+                                team: "Bengals",
+                                division: "AFC-North",
+                                conference: "AFC",
+                                schedule: [ ],
+                                bars: [
+                                  {
+                                    id: 1,
+                                    name: "B.D. Riley's",
+                                    official: false
+                                  }
+                                ]
+                            },
+                            {
+                                "id": 3,
+                                "location": "Cleveland",
+                                "team": "Browns",
+                                "division": "AFC-North",
+                                "conference": "AFC",
+                                "schedule": [],
+                                "bars": [
+                                  {
+                                    "id": 17,
+                                    "name": "Midway Field House",
+                                    "official": true
+                                  },
+                                  {
+                                    "id": 20,
+                                    "name": "Recess Arcade Bar",
+                                    "official": false
+                                  },
+                                  {
+                                    "name": "Joe’s Bar and Grill",
+                                    "official": false
+                                  }
+                                ]
+                            }
+                        ]
+                    </pre>
                     <h4 class="ep" id="teams-show">
                         <pre><code>/api/v1/teams/:id</code></pre>
                     </h4>
                     <p>
-                        When working on a web application that involves a lot of JavaScript, one of the first things you learn is to stop tying your data to the DOM. It's all too easy to create JavaScript applications that end up as tangled piles of jQuery selectors and callbacks, all trying frantically to keep data in sync between the HTML UI, your JavaScript logic, and the database on your server. For rich client-side applications, a more structured approach is often helpful.
+                        Returns one NFL team
                     </p>
                     <p>
-                        If you're new here, and aren't yet quite sure what Backbone is for, start by browsing the list of Backbone-based projects.
+                        Authentication: oauth2
                     </p>
+                    <p>
+                        Example Request
+                    </p>
+                    <pre>
+                        GET | http://mvb.com/api/v1/teams/5
+                    </pre>
+                    <p>
+                        Example Response
+                    </p>
+                    <pre>
+                        {
+                            "id": 5,
+                            "location": "Chicago",
+                            "team": "Bears",
+                            "division": "NFC-North",
+                            "conference": "NFC",
+                            "schedule": [],
+                            "bars": [
+                              {
+                                "name": "Thirsty Nickel",
+                                "offical": false
+                              },
+                              {
+                                "name": "Pluckers (S. Lamar)",
+                                "offical": false
+                              },
+                              {
+                                "id": 12,
+                                "name": "Gibson",
+                                "offical": false
+                              },
+                              {
+                                "name": "Chicago House",
+                                "offical": false
+                              },
+                              {
+                                "id": 25,
+                                "name": "Trifecta",
+                                "offical": false
+                              },
+                              {
+                                "name": "Third Base",
+                                "official": false
+                              }
+                            ]
+                        }
+                    </pre>
                     <h4 class="ep" id="teams-bars">
                         <pre><code>/api/v1/teams/:id/bars</code></pre>
                     </h4>
                     <p>
-                        When working on a web application that involves a lot of JavaScript, one of the first things you learn is to stop tying your data to the DOM. It's all too easy to create JavaScript applications that end up as tangled piles of jQuery selectors and callbacks, all trying frantically to keep data in sync between the HTML UI, your JavaScript logic, and the database on your server. For rich client-side applications, a more structured approach is often helpful.
+                        Returns a list of the teams bars
                     </p>
                     <p>
-                        If you're new here, and aren't yet quite sure what Backbone is for, start by browsing the list of Backbone-based projects.
+                        Authentication: oauth2
                     </p>
+                    <p>
+                        Example Request
+                    </p>
+                    <pre>
+                        GET | http://mvb.com/api/v1/teams/5/bars
+                    </pre>
+                    <p>
+                        Example Response
+                    </p>
+                    <pre>
+                        [
+                            {
+                                name: "Thirsty Nickel",
+                                offical: false
+                            },
+                            {
+                                name: "Pluckers (S. Lamar)",
+                                offical: false
+                            },
+                            {
+                                id: 12,
+                                name: "Gibson",
+                                offical: false
+                            },
+                            {
+                                name: "Chicago House",
+                                offical: false
+                            },
+                            {
+                                id: 25,
+                                name: "Trifecta",
+                                offical: false
+                            },
+                            {
+                                name: "Third Base",
+                                official: false
+                            }
+                        ]
+                    </pre>
                 </div>
                 <h3 class="title">Bars</h3>
 
@@ -99,29 +237,258 @@
                         <pre><code>/api/v1/bars</code></pre>
                     </h4>
                     <p>
-                        Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.
+                        Returns a list of bars
                     </p>
                     <p>
-                        If you're new here, and aren't yet quite sure what Backbone is for, start by browsing the list of Backbone-based projects.
+                        Authentication: oauth2
                     </p>
+                    <p>
+                        Example Request
+                    </p>
+                    <pre>
+                        GET | http://mvb.com/api/v1/bars
+                    </pre>
+                    <p>
+                        Example Response
+                    </p>
+                    <pre>
+                        [
+
+                            {
+                                "id": 1,
+                                "name": "B.D. Riley's",
+                                "description": "Irish & local craft-brewed beers alongside an upscale pub menu, with traditional Irish decor.",
+                                "location": [
+
+                                    {
+                                        "address": "204 E 6th Street",
+                                        "zipcode": 78701,
+                                        "city": "Austin",
+                                        "state": "TX",
+                                        "phoneNumber": "512-494-1335",
+                                        "hours": [
+
+                                            {
+                                                "monday": {
+                                                    "open": "4:00pm",
+                                                    "close": "12:00am"
+                                                },
+
+                                                "tuesday": {
+                                                    "open": "4:00pm",
+                                                    "close": "12:00am"
+                                                },
+
+                                                "wednesday": {
+                                                    "open": "11:00am",
+                                                    "close": "12:00am"
+                                                },
+
+                                                "thursday": {
+                                                    "open": "11:00am",
+                                                    "close": "12:00am"
+                                                },
+
+                                                "friday": {
+                                                    "open": "11:00am",
+                                                    "close": "2:00am"
+                                                },
+
+                                                "saturday": {
+                                                    "open": "11:00am",
+                                                    "close": "2:00am"
+                                                },
+
+                                                "sunday": {
+                                                    "open": "11:00am",
+                                                    "close": "12:00am"
+                                                }
+                                            }
+
+                                        ]
+                                    }
+
+                                ],
+                                "menu": "https://bdrileys.com/menu/",
+                                "teams": [
+
+                                    {
+                                        "name": "Houston Texans",
+                                        "schedule": []
+                                    },
+                                    {
+                                        "name": "New England Patriots",
+                                        "schedule": []
+                                    }
+
+                                ]
+                            },
+                            {
+                                "id": 2,
+                                "name": "Bar 96",
+                                "description": "Casual sports-friendly bar in a former bungalow with a wraparound porch, board games & a food truck.",
+                                "address": "96 Rainey St",
+                                "zipcode": 78701,
+                                "city": "Austin",
+                                "state": "TX",
+                                "phoneNumber": "512-433-6604",
+                                "hours": [
+
+                                    {
+                                        "monday": {
+                                            "open": "2:00pm",
+                                            "close": "2:00am"
+                                        },
+
+                                        "tuesday": {
+                                            "open": "2:00pm",
+                                            "close": "2:00am"
+                                        },
+
+                                        "wednesday": {
+                                            "open": "2:00pm",
+                                            "close": "2:00am"
+                                        },
+
+                                        "thursday": {
+                                            "open": "2:00pm",
+                                            "close": "2:00am"
+                                        },
+
+                                        "friday": {
+                                            "open": "12:00pm",
+                                            "close": "2:00am"
+                                        },
+
+                                        "saturday": {
+                                            "open": "11:00am",
+                                            "close": "2:00am"
+                                        },
+
+                                        "sunday": {
+                                            "open": "11:00am",
+                                            "close": "2:00am"
+                                        }
+                                    }
+
+                                ],
+                                "menu": "https://locu.com/places/bar-96-austin-us/#menu",
+                                "teams": [
+
+                                    {
+                                        "name": "Baltimore Ravens",
+                                        "schedule": []
+                                    }
+
+                                ]
+                    </pre>
                     <h4 class="ep" id="bars-show">
                         <pre><code>/api/v1/bars/:id</code></pre>
                     </h4>
                     <p>
-                        Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.
+                        Returns one bar
                     </p>
                     <p>
-                        If you're new here, and aren't yet quite sure what Backbone is for, start by browsing the list of Backbone-based projects.
+                        Authentication: oauth2
                     </p>
+                    <p>
+                        Example Request
+                    </p>
+                    <pre>
+                        GET | http://mvb.com/api/v1/bars/6
+                    </pre>
+                    <p>
+                        Example Response
+                    </p>
+                    <pre>
+                        {
+                            "id": 6,
+                            "name": "Black Sheep Lodge",
+                            "description": "This dog-friendly sports bar, known for its burgers, offers daily drink specials & bar games.",
+                            "address": "2108 S Lamar Blvd",
+                            "zipcode": 78704,
+                            "city": "Austin",
+                            "state": "TX",
+                            "phoneNumber": "512-707-2744",
+                            "hours": [
+
+                                {
+                                    "monday": {
+                                        "open": "11:00am",
+                                        "close": "12:00am"
+                                    },
+
+                                    "tuesday": {
+                                        "open": "11:00am",
+                                        "close": "12:00am"
+                                    },
+
+                                    "wednesday": {
+                                        "open": "11:00am",
+                                        "close": "12:00am"
+                                    },
+
+                                    "thursday": {
+                                        "open": "11:00am",
+                                        "close": "12:00am"
+                                    },
+
+                                    "friday": {
+                                        "open": "11:00am",
+                                        "close": "2:00am"
+                                    },
+
+                                    "saturday": {
+                                        "open": "11:00am",
+                                        "close": "1:00am"
+                                    },
+
+                                    "sunday": {
+                                        "open": "11:00am",
+                                        "close": "12:00am"
+                                    }
+                                }
+
+                            ],
+                            "menu": "http://www.blacksheeplodge.com/menu/",
+                            "teams": [
+
+                                {
+                                    "name": "Washington Redskins",
+                                    "schedule": []
+                                }
+
+                            ]
+                        }
+                    </pre>
                     <h4 class="ep" id="bars-teams">
                         <pre><code>/api/v1/bars/:id/team</code></pre>
                     </h4>
                     <p>
-                        Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.
+                        Returns a list of the bars teams
                     </p>
                     <p>
-                        If you're new here, and aren't yet quite sure what Backbone is for, start by browsing the list of Backbone-based projects.
+                        Authentication: oauth2
                     </p>
+                    <p>
+                        Example Request
+                    </p>
+                    <pre>
+                        GET | http://mvb.com/api/v1/bars/6/teams
+                    </pre>
+                    <p>
+                        Example Response
+                    </p>
+                    <pre>
+                        [
+
+                            {
+                                "name": "Washington Redskins",
+                                "schedule": []
+                            }
+
+                        ]
+                    </pre>
                 </div>
             </div>
         </div>
