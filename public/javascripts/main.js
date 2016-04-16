@@ -7,4 +7,9 @@ $(function(){
         e.preventDefault();
         $('.bar-list li').slideToggle('fast');
     })
+
+    $('#team-index-response').on('click', function(e){
+        e.preventDefault();
+        $('pre').slideToggle('fast');
+    })
 })

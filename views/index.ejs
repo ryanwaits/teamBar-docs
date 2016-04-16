@@ -31,33 +31,30 @@
 
                 <div class="sub-content">
                     <p>
-                        Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.
+                        As sports fans ourselves, we found it quite difficult to locate which bars support which NFL teams. We set out to organize and manage that data for you so that you can bring to life creative digital solutions this problem.
                     </p>
                     <p>
-                        The project is hosted on GitHub, and the annotated source code is available, as well as an online test suite, an example application, a list of tutorials and a long list of real-world projects that use Backbone. Backbone is available for use under the MIT software license.
+                        Our data-set is continously being updated to include the most current information possible, as well as expand to more and more cities around the US. We do have plans to add additional sports such as MLB & NBA down the road.
                     </p>
                     <p>
-                        You can report bugs and discuss features on the GitHub issues page, on Freenode IRC in the #documentcloud channel, post questions to the Google Group, add pages to the wiki or send tweets to @documentcloud.
+                        If you have any questions or concerns, feel free to reach out to us here.
                     </p>
                 </div>
                 <h3 class="title" id="intro">Getting Started</h3>
 
                 <div class="sub-content">
                     <p>
-                        When working on a web application that involves a lot of JavaScript, one of the first things you learn is to stop tying your data to the DOM. It's all too easy to create JavaScript applications that end up as tangled piles of jQuery selectors and callbacks, all trying frantically to keep data in sync between the HTML UI, your JavaScript logic, and the database on your server. For rich client-side applications, a more structured approach is often helpful.
+                        The MVB API is organized around REST. Our API has predictable, resource-oriented URLs. JSON is returned by all API responses, including errors.
                     </p>
                     <p>
-                        If you're new here, and aren't yet quite sure what Backbone is for, start by browsing the list of Backbone-based projects.
-                    </p>
-                    <p>
-                        Many of the code examples in this documentation are runnable, because Backbone is included on this page. Click the play button to execute them.
+                        Our API is currently open to the public and can be accessed without any tokens or API key. However, we do plan to make the API private soon.
                     </p>
                 </div>
                 <h3 class="title">Teams</h3>
 
                 <div class="sub-content">
                     <p>
-                        When working on a web application that involves a lot of JavaScript, one of the first things you learn is to stop tying your data to the DOM. It's all too easy to create JavaScript applications that end up as tangled piles of jQuery selectors and callbacks, all trying frantically to keep data in sync between the HTML UI, your JavaScript logic, and the database on your server. For rich client-side applications, a more structured approach is often helpful.
+                        This is an object representing all the NFL teams. You can retrieve it to see each teams schedule as well as associated bars and their location.
                     </p>
 
                     <h4 class="ep" id="teams-index">
@@ -75,7 +72,7 @@
                     <pre>
                         GET | http://mvb.com/api/v1/teams
                     </pre>
-                    <p>
+                    <p id="team-index-response">
                         Example Response
                     </p>
                     <pre>
@@ -136,7 +133,7 @@
                     <pre>
                         GET | http://mvb.com/api/v1/teams/5
                     </pre>
-                    <p>
+                    <p id="team-show-response">
                         Example Response
                     </p>
                     <pre>
@@ -192,7 +189,7 @@
                     <pre>
                         GET | http://mvb.com/api/v1/teams/5/bars
                     </pre>
-                    <p>
+                    <p id="team-bars-response">
                         Example Response
                     </p>
                     <pre>
@@ -230,7 +227,7 @@
 
                 <div class="sub-content">
                     <p>
-                        When working on a web application that involves a lot of JavaScript, one of the first things you learn is to stop tying your data to the DOM. It's all too easy to create JavaScript applications that end up as tangled piles of jQuery selectors and callbacks, all trying frantically to keep data in sync between the HTML UI, your JavaScript logic, and the database on your server. For rich client-side applications, a more structured approach is often helpful.
+                        This is an object representing all the local bars ( currently only in Austin, TX ). You can retrieve it to see each bar, including location and store hours, as well as the teams associated.
                     </p>
 
                     <h4 class="ep" id="bars-index">
@@ -248,7 +245,7 @@
                     <pre>
                         GET | http://mvb.com/api/v1/bars
                     </pre>
-                    <p>
+                    <p id="bars-index-response">
                         Example Response
                     </p>
                     <pre>
@@ -397,7 +394,7 @@
                     <pre>
                         GET | http://mvb.com/api/v1/bars/6
                     </pre>
-                    <p>
+                    <p id="bars-show-response">
                         Example Response
                     </p>
                     <pre>
@@ -476,7 +473,7 @@
                     <pre>
                         GET | http://mvb.com/api/v1/bars/6/teams
                     </pre>
-                    <p>
+                    <p id="bars-teams-response">
                         Example Response
                     </p>
                     <pre>
