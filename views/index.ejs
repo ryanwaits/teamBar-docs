@@ -69,54 +69,54 @@
                     <p>
                         Example Request
                     </p>
-                    <pre>
+                    <code class="request">
                         GET | http://mvb.com/api/v1/teams
-                    </pre>
+                    </code>
                     <p id="team-index-response">
                         Example Response
                     </p>
-                    <pre>
-                        [
-                            {
-                                id: 2,
-                                location: "Cincinnati",
-                                team: "Bengals",
-                                division: "AFC-North",
-                                conference: "AFC",
-                                schedule: [ ],
-                                bars: [
-                                  {
-                                    id: 1,
-                                    name: "B.D. Riley's",
-                                    official: false
-                                  }
-                                ]
-                            },
-                            {
-                                "id": 3,
-                                "location": "Cleveland",
-                                "team": "Browns",
-                                "division": "AFC-North",
-                                "conference": "AFC",
-                                "schedule": [],
-                                "bars": [
-                                  {
-                                    "id": 17,
-                                    "name": "Midway Field House",
-                                    "official": true
-                                  },
-                                  {
-                                    "id": 20,
-                                    "name": "Recess Arcade Bar",
-                                    "official": false
-                                  },
-                                  {
-                                    "name": "Joe’s Bar and Grill",
-                                    "official": false
-                                  }
-                                ]
-                            }
-                        ]
+                    <pre class="response">
+  [
+      {
+          id: 2,
+          location: "Cincinnati",
+          team: "Bengals",
+          division: "AFC-North",
+          conference: "AFC",
+          schedule: [ ],
+          bars: [
+            {
+              id: 1,
+              name: "B.D. Riley's",
+              official: false
+            }
+          ]
+      },
+      {
+          "id": 3,
+          "location": "Cleveland",
+          "team": "Browns",
+          "division": "AFC-North",
+          "conference": "AFC",
+          "schedule": [],
+          "bars": [
+            {
+              "id": 17,
+              "name": "Midway Field House",
+              "official": true
+            },
+            {
+              "id": 20,
+              "name": "Recess Arcade Bar",
+              "official": false
+            },
+            {
+              "name": "Joe’s Bar and Grill",
+              "official": false
+            }
+          ]
+      }
+  ]
                     </pre>
                     <h4 class="ep" id="teams-show">
                         <pre><code>/api/v1/teams/:id</code></pre>
@@ -130,49 +130,49 @@
                     <p>
                         Example Request
                     </p>
-                    <pre>
+                    <code class="request">
                         GET | http://mvb.com/api/v1/teams/5
-                    </pre>
+                    </code>
                     <p id="team-show-response">
                         Example Response
                     </p>
-                    <pre>
-                        {
-                            "id": 5,
-                            "location": "Chicago",
-                            "team": "Bears",
-                            "division": "NFC-North",
-                            "conference": "NFC",
-                            "schedule": [],
-                            "bars": [
-                              {
-                                "name": "Thirsty Nickel",
-                                "offical": false
-                              },
-                              {
-                                "name": "Pluckers (S. Lamar)",
-                                "offical": false
-                              },
-                              {
-                                "id": 12,
-                                "name": "Gibson",
-                                "offical": false
-                              },
-                              {
-                                "name": "Chicago House",
-                                "offical": false
-                              },
-                              {
-                                "id": 25,
-                                "name": "Trifecta",
-                                "offical": false
-                              },
-                              {
-                                "name": "Third Base",
-                                "official": false
-                              }
-                            ]
-                        }
+                    <pre class="response">
+  {
+      "id": 5,
+      "location": "Chicago",
+      "team": "Bears",
+      "division": "NFC-North",
+      "conference": "NFC",
+      "schedule": [],
+      "bars": [
+        {
+          "name": "Thirsty Nickel",
+          "offical": false
+        },
+        {
+          "name": "Pluckers (S. Lamar)",
+          "offical": false
+        },
+        {
+          "id": 12,
+          "name": "Gibson",
+          "offical": false
+        },
+        {
+          "name": "Chicago House",
+          "offical": false
+        },
+        {
+          "id": 25,
+          "name": "Trifecta",
+          "offical": false
+        },
+        {
+          "name": "Third Base",
+          "official": false
+        }
+      ]
+  }
                     </pre>
                     <h4 class="ep" id="teams-bars">
                         <pre><code>/api/v1/teams/:id/bars</code></pre>
@@ -186,41 +186,41 @@
                     <p>
                         Example Request
                     </p>
-                    <pre>
+                    <code class="request">
                         GET | http://mvb.com/api/v1/teams/5/bars
-                    </pre>
+                    </code>
                     <p id="team-bars-response">
                         Example Response
                     </p>
-                    <pre>
-                        [
-                            {
-                                name: "Thirsty Nickel",
-                                offical: false
-                            },
-                            {
-                                name: "Pluckers (S. Lamar)",
-                                offical: false
-                            },
-                            {
-                                id: 12,
-                                name: "Gibson",
-                                offical: false
-                            },
-                            {
-                                name: "Chicago House",
-                                offical: false
-                            },
-                            {
-                                id: 25,
-                                name: "Trifecta",
-                                offical: false
-                            },
-                            {
-                                name: "Third Base",
-                                official: false
-                            }
-                        ]
+                    <pre class="response">
+  [
+      {
+          name: "Thirsty Nickel",
+          offical: false
+      },
+      {
+          name: "Pluckers (S. Lamar)",
+          offical: false
+      },
+      {
+          id: 12,
+          name: "Gibson",
+          offical: false
+      },
+      {
+          name: "Chicago House",
+          offical: false
+      },
+      {
+          id: 25,
+          name: "Trifecta",
+          offical: false
+      },
+      {
+          name: "Third Base",
+          official: false
+      }
+  ]
                     </pre>
                 </div>
                 <h3 class="title">Bars</h3>
@@ -242,142 +242,145 @@
                     <p>
                         Example Request
                     </p>
-                    <pre>
+                    <code class="request">
                         GET | http://mvb.com/api/v1/bars
-                    </pre>
+                    </code>
                     <p id="bars-index-response">
                         Example Response
                     </p>
-                    <pre>
-                        [
+                    <pre class="response">
+  [
 
-                            {
-                                "id": 1,
-                                "name": "B.D. Riley's",
-                                "description": "Irish & local craft-brewed beers alongside an upscale pub menu, with traditional Irish decor.",
-                                "location": [
+    {
+      "id": 1,
+      "name": "B.D. Riley's",
+      "description": "Irish & local craft-brewed beers alongside an upscale pub menu, with traditional Irish decor.",
+      "location": [
 
-                                    {
-                                        "address": "204 E 6th Street",
-                                        "zipcode": 78701,
-                                        "city": "Austin",
-                                        "state": "TX",
-                                        "phoneNumber": "512-494-1335",
-                                        "hours": [
+          {
+              "address": "204 E 6th Street",
+              "zipcode": 78701,
+              "city": "Austin",
+              "state": "TX",
+              "phoneNumber": "512-494-1335",
+              "hours": [
 
-                                            {
-                                                "monday": {
-                                                    "open": "4:00pm",
-                                                    "close": "12:00am"
-                                                },
+                  {
+                      "monday": {
+                          "open": "4:00pm",
+                          "close": "12:00am"
+                      },
 
-                                                "tuesday": {
-                                                    "open": "4:00pm",
-                                                    "close": "12:00am"
-                                                },
+                      "tuesday": {
+                          "open": "4:00pm",
+                          "close": "12:00am"
+                      },
 
-                                                "wednesday": {
-                                                    "open": "11:00am",
-                                                    "close": "12:00am"
-                                                },
+                      "wednesday": {
+                          "open": "11:00am",
+                          "close": "12:00am"
+                      },
 
-                                                "thursday": {
-                                                    "open": "11:00am",
-                                                    "close": "12:00am"
-                                                },
+                      "thursday": {
+                          "open": "11:00am",
+                          "close": "12:00am"
+                      },
 
-                                                "friday": {
-                                                    "open": "11:00am",
-                                                    "close": "2:00am"
-                                                },
+                      "friday": {
+                          "open": "11:00am",
+                          "close": "2:00am"
+                      },
 
-                                                "saturday": {
-                                                    "open": "11:00am",
-                                                    "close": "2:00am"
-                                                },
+                      "saturday": {
+                          "open": "11:00am",
+                          "close": "2:00am"
+                      },
 
-                                                "sunday": {
-                                                    "open": "11:00am",
-                                                    "close": "12:00am"
-                                                }
-                                            }
+                      "sunday": {
+                          "open": "11:00am",
+                          "close": "12:00am"
+                      }
+                  }
 
-                                        ]
-                                    }
+              ]
+          }
 
-                                ],
-                                "menu": "https://bdrileys.com/menu/",
-                                "teams": [
+      ],
+      "menu": "https://bdrileys.com/menu/",
+      "teams": [
 
-                                    {
-                                        "name": "Houston Texans",
-                                        "schedule": []
-                                    },
-                                    {
-                                        "name": "New England Patriots",
-                                        "schedule": []
-                                    }
+          {
+              "name": "Houston Texans",
+              "schedule": []
+          },
+          {
+              "name": "New England Patriots",
+              "schedule": []
+          }
 
-                                ]
-                            },
-                            {
-                                "id": 2,
-                                "name": "Bar 96",
-                                "description": "Casual sports-friendly bar in a former bungalow with a wraparound porch, board games & a food truck.",
-                                "address": "96 Rainey St",
-                                "zipcode": 78701,
-                                "city": "Austin",
-                                "state": "TX",
-                                "phoneNumber": "512-433-6604",
-                                "hours": [
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bar 96",
+      "description": "Casual sports-friendly bar in a former bungalow with a wraparound porch, board games & a food truck.",
+      "address": "96 Rainey St",
+      "zipcode": 78701,
+      "city": "Austin",
+      "state": "TX",
+      "phoneNumber": "512-433-6604",
+      "hours": [
 
-                                    {
-                                        "monday": {
-                                            "open": "2:00pm",
-                                            "close": "2:00am"
-                                        },
+          {
+              "monday": {
+                  "open": "2:00pm",
+                  "close": "2:00am"
+              },
 
-                                        "tuesday": {
-                                            "open": "2:00pm",
-                                            "close": "2:00am"
-                                        },
+              "tuesday": {
+                  "open": "2:00pm",
+                  "close": "2:00am"
+              },
 
-                                        "wednesday": {
-                                            "open": "2:00pm",
-                                            "close": "2:00am"
-                                        },
+              "wednesday": {
+                  "open": "2:00pm",
+                  "close": "2:00am"
+              },
 
-                                        "thursday": {
-                                            "open": "2:00pm",
-                                            "close": "2:00am"
-                                        },
+              "thursday": {
+                  "open": "2:00pm",
+                  "close": "2:00am"
+              },
 
-                                        "friday": {
-                                            "open": "12:00pm",
-                                            "close": "2:00am"
-                                        },
+              "friday": {
+                  "open": "12:00pm",
+                  "close": "2:00am"
+              },
 
-                                        "saturday": {
-                                            "open": "11:00am",
-                                            "close": "2:00am"
-                                        },
+              "saturday": {
+                  "open": "11:00am",
+                  "close": "2:00am"
+              },
 
-                                        "sunday": {
-                                            "open": "11:00am",
-                                            "close": "2:00am"
-                                        }
-                                    }
+              "sunday": {
+                  "open": "11:00am",
+                  "close": "2:00am"
+              }
+          }
 
-                                ],
-                                "menu": "https://locu.com/places/bar-96-austin-us/#menu",
-                                "teams": [
+      ],
+      "menu": "https://locu.com/places/bar-96-austin-us/#menu",
+      "teams": [
 
-                                    {
-                                        "name": "Baltimore Ravens",
-                                        "schedule": []
-                                    }
+          {
+              "name": "Baltimore Ravens",
+              "schedule": []
+          }
 
-                                ]
+      ]
+    }
+
+  ]
                     </pre>
                     <h4 class="ep" id="bars-show">
                         <pre><code>/api/v1/bars/:id</code></pre>
@@ -391,72 +394,72 @@
                     <p>
                         Example Request
                     </p>
-                    <pre>
+                    <code class="request">
                         GET | http://mvb.com/api/v1/bars/6
-                    </pre>
+                    </code>
                     <p id="bars-show-response">
                         Example Response
                     </p>
-                    <pre>
-                        {
-                            "id": 6,
-                            "name": "Black Sheep Lodge",
-                            "description": "This dog-friendly sports bar, known for its burgers, offers daily drink specials & bar games.",
-                            "address": "2108 S Lamar Blvd",
-                            "zipcode": 78704,
-                            "city": "Austin",
-                            "state": "TX",
-                            "phoneNumber": "512-707-2744",
-                            "hours": [
+                    <pre class="response">
+  {
+      "id": 6,
+      "name": "Black Sheep Lodge",
+      "description": "This dog-friendly sports bar, known for its burgers, offers daily drink specials & bar games.",
+      "address": "2108 S Lamar Blvd",
+      "zipcode": 78704,
+      "city": "Austin",
+      "state": "TX",
+      "phoneNumber": "512-707-2744",
+      "hours": [
 
-                                {
-                                    "monday": {
-                                        "open": "11:00am",
-                                        "close": "12:00am"
-                                    },
+          {
+              "monday": {
+                  "open": "11:00am",
+                  "close": "12:00am"
+              },
 
-                                    "tuesday": {
-                                        "open": "11:00am",
-                                        "close": "12:00am"
-                                    },
+              "tuesday": {
+                  "open": "11:00am",
+                  "close": "12:00am"
+              },
 
-                                    "wednesday": {
-                                        "open": "11:00am",
-                                        "close": "12:00am"
-                                    },
+              "wednesday": {
+                  "open": "11:00am",
+                  "close": "12:00am"
+              },
 
-                                    "thursday": {
-                                        "open": "11:00am",
-                                        "close": "12:00am"
-                                    },
+              "thursday": {
+                  "open": "11:00am",
+                  "close": "12:00am"
+              },
 
-                                    "friday": {
-                                        "open": "11:00am",
-                                        "close": "2:00am"
-                                    },
+              "friday": {
+                  "open": "11:00am",
+                  "close": "2:00am"
+              },
 
-                                    "saturday": {
-                                        "open": "11:00am",
-                                        "close": "1:00am"
-                                    },
+              "saturday": {
+                  "open": "11:00am",
+                  "close": "1:00am"
+              },
 
-                                    "sunday": {
-                                        "open": "11:00am",
-                                        "close": "12:00am"
-                                    }
-                                }
+              "sunday": {
+                  "open": "11:00am",
+                  "close": "12:00am"
+              }
+          }
 
-                            ],
-                            "menu": "http://www.blacksheeplodge.com/menu/",
-                            "teams": [
+      ],
+      "menu": "http://www.blacksheeplodge.com/menu/",
+      "teams": [
 
-                                {
-                                    "name": "Washington Redskins",
-                                    "schedule": []
-                                }
+          {
+              "name": "Washington Redskins",
+              "schedule": []
+          }
 
-                            ]
-                        }
+      ]
+  }
                     </pre>
                     <h4 class="ep" id="bars-teams">
                         <pre><code>/api/v1/bars/:id/team</code></pre>
@@ -470,21 +473,21 @@
                     <p>
                         Example Request
                     </p>
-                    <pre>
+                    <code class="request">
                         GET | http://mvb.com/api/v1/bars/6/teams
-                    </pre>
+                    </code>
                     <p id="bars-teams-response">
                         Example Response
                     </p>
-                    <pre>
-                        [
+                    <pre class="response">
+  [
 
-                            {
-                                "name": "Washington Redskins",
-                                "schedule": []
-                            }
+      {
+          "name": "Washington Redskins",
+          "schedule": []
+      }
 
-                        ]
+  ]
                     </pre>
                 </div>
             </div>
