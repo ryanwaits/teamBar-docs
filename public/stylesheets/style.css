@@ -51,12 +51,12 @@ p {
 .main-content {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 75%;
     margin: 1.5%;
     overflow: scroll;
 }
 .sub-content {
-    width: 75%;
+    width: 80%;
 }
 .header {
     font-size: 1.5em;
@@ -75,4 +75,45 @@ p {
 }
 .ep {
     margin: 2.5%;
+}
+.request {
+    font-family: monospace;
+    font-size: 1.2em;
+    padding-left: 6%;
+}
+.response {
+    padding-top: 2%;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    font-weight: 400;
+    font-size: 1.1em;
+    text-align: left;
+    overflow: scroll;
+}
+
+@media screen and (max-width: 768px) {
+  .side-content {
+    display: none;
+  }
+  .main-content {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .sub-content {
+    width: 100%;
+  }
+}
+@media screen and (width: 1024px) and (orientation: landscape) {
+  .side-content {
+    width: 22%;
+  }
+  .main-content {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .sub-content {
+    width: 98%;
+  }
 }
